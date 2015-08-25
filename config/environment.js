@@ -19,6 +19,15 @@ module.exports = function(environment) {
     }
   };
 
+  ENV['simple-auth'] = {
+    base: {
+      store: 'session-store:local-storage'
+    },
+    oauth2: {
+      serverTokenRevocationEndpoint: '/revoke'
+    }
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
